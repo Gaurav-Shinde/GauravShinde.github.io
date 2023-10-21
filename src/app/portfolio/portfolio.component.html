@@ -3,9 +3,85 @@
   <div class="mb-2">
     <div>
       <button class="btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">Filter</button>
+      <button class="btn btn-outline-secondary mb-2 me-2" (click)=resetFilter() [hidden]="!filtering">Reset</button>
     </div>
     <div [collapse]="isCollapsed" [isAnimated]="true">
-      <div class="border shadow-sm mb-2" style="width: 250px;"></div>
+      <div class="border shadow-sm mb-2" style="width: 250px;">
+        <form action="">
+          <div class="row mx-0">
+            <div class="col">
+              <small><b>Languages:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="javascript"
+                    (change)="filter()" name="Javascript">
+                  <label class="form-check-label small">Javascript</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="python"
+                    (change)="filter()" name="Python">
+                  <label class="form-check-label small">Python</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="java"
+                    (change)="filter()" name="Java">
+                  <label class="form-check-label small">Java</label>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <small><b>Frameworks:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="angular"
+                    (change)="filter()" name="Angular">
+                  <label class="form-check-label small">Angular</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="springboot"
+                    (change)="filter()" name="Springboot">
+                  <label class="form-check-label small">Springboot</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="node"
+                    (change)="filter()" name="Node">
+                  <label class="form-check-label small">Node</label>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <small><b>Tools:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="jenkins"
+                    (change)="filter()" name="Jenkins">
+                  <label class="form-check-label small">Jenkins</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="docker"
+                    (change)="filter()" name="Docker">
+                  <label class="form-check-label small">Docker</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="ansible"
+                    (change)="filter()" name="Ansible">
+                  <label class="form-check-label small">Ansible</label>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <small><b>Databases:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="mysql"
+                    (change)="filter()" name="MySQL">
+                  <label class="form-check-label small">MySQL</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
