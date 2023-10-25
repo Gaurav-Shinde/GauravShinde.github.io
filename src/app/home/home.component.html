@@ -1,29 +1,29 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg shadow border m-1">
-      <div class="text-center">
-        <h2>About Me</h2>
-        <img src="assets/profile_picture.jpg" alt="Profile Picture"
-          class="mx-auto d-block rounded img-fluid rounded-circle" width="256" height="256">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque commodi explicabo aut aspernatur libero at
-          iusto, natus saepe quidem repellendus, vitae reprehenderit distinctio velit vero laborum repellat quis magni
-          quos.</p>
-      </div>
-    </div>
-    <div class="col-lg shadow border m-1">
-      <div class="text-center">
-        <h2>Featured Projects</h2>
-        <h4>{{featuredProject.name}}</h4>
-      </div>
-
-      <carousel>
-        <div *ngFor="let pic of featuredProject.pictures">
-          <slide><img src={{pic}} alt="slide" class="w-100 d-block"></slide>
+    <div class="row">
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="assets/profile_picture.jpg" alt="Profile Picture"
+                    class="mx-auto d-block rounded img-fluid rounded-circle" width="256" height="256">
+                <p class="lead">Welcome to my portfolio website! <br> I have interests in devops and cloud
+                    infrastructure, with
+                    experience in web development.</p>
+            </div>
         </div>
-      </carousel>
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Projects</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
 
-      <p class="mt-2">{{featuredProject.summary}}</p>
-      <p>Visit the portfolio to learn more about this project!</p>
+            <carousel>
+                <div *ngFor="let pic of featuredProject.pictures">
+                    <slide><img src={{pic}} alt="slide" class="w-100 d-block"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Visit the portfolio to learn more about this project!</p>
+        </div>
     </div>
-  </div>
 </div>

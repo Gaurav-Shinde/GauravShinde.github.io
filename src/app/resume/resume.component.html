@@ -1,1 +1,13 @@
-<p>resume works!</p>
+<div class="alert alert-warning" role="alert">
+    Page is under construction...
+</div>
+<div class="container d-flex justify-content-center">
+    <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Show Resume
+    </button>
+
+</div>
+<hr>
+<div id="collapseBasic" [collapse]="isCollapsed">
+    <div class="well well-lg card card-block card-header">Some content</div>
+</div>
